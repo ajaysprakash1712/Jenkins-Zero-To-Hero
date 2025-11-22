@@ -1,8 +1,8 @@
 pipeline {
   agent {
     docker {
-        image 'cytopia/maven-docker:latest'
-        args '--user root -v /var/run/docker.sock:/var/run/docker.sock'
+        image 'maven:3.9.6-eclipse-temurin-17-dind'
+        args '--privileged --user root -v /var/run/docker.sock:/var/run/docker.sock'
     }
 }
 
